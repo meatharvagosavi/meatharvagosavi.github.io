@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atharva Gosavi</title>
+<meta name="description" content="Atharva Gosavi is an AI/ML engineer and software developer pursuing an M.Tech in Signal Processing & Machine Learning at NITK Surathkal. B.Tech CSE (CGPA 9.09), GATE CSE qualified 3 times. Projects in deep learning, computer vision, NLP and embedded systems.">
+<meta name="author" content="Atharva Gosavi">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0c0d10">
+<link rel="canonical" href="https://meatharvagosavi.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff6a3d'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='700' font-size='28' text-anchor='middle' fill='%23140a06'%3EAG%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Atharva Gosavi | AI Engineer & Software Developer">
+<meta property="og:description" content="M.Tech Signal Processing & ML at NITK Surathkal. GATE CSE qualified 3x. Deep learning, computer vision and embedded projects with live demos.">
+<meta property="og:url" content="https://meatharvagosavi.github.io/">
+<meta property="og:image" content="https://meatharvagosavi.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="profile:first_name" content="Atharva">
+<meta property="profile:last_name" content="Gosavi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Atharva Gosavi | AI Engineer & Software Developer">
+<meta name="twitter:description" content="M.Tech at NITK Surathkal. Deep learning, computer vision and embedded projects with live demos.">
+<meta name="twitter:image" content="https://meatharvagosavi.github.io/og.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Atharva Gosavi","url":"https://meatharvagosavi.github.io/","image":"https://meatharvagosavi.github.io/og.png","jobTitle":"AI Engineer and Software Developer","address":{"@type":"PostalAddress","addressLocality":"Surathkal","addressRegion":"Karnataka","addressCountry":"IN"},"affiliation":{"@type":"CollegeOrUniversity","name":"National Institute of Technology Karnataka, Surathkal"},"knowsAbout":["Machine Learning","Deep Learning","Computer Vision","Natural Language Processing","Signal Processing","Optimization Algorithms","PyTorch","Python","C++","FreeRTOS"],"sameAs":["https://github.com/meatharvagosavi","https://www.linkedin.com/in/arg-57sam255/","https://leetcode.com/u/AtharvaGosavi","https://www.geeksforgeeks.org/profile/argosav0733","https://codeforces.com/profile/atharvagosavi2025","https://www.kaggle.com/atharvargosavi","https://www.holopin.io/@meatharvagosavi"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+/* VOICE  occasion: a confident developer's personal site, dark, precise, engineered
+   IDEA   a training run: the site behaves like an ML lab notebook, every project page has a working experiment
+   PICTURE live contour map of a loss surface with SGD, Momentum, RMSprop and Adam racing to the minimum
+   COLOUR graphite ground #0c0d10, warm white ink, coral #ff6a3d lead, ice #8ab4ff support, lime #c6f36b sharp mark
+   TYPE   Space Grotesk 700 display + Inter text, JetBrains Mono only inside code-like labels
+   LAYOUT laptop: name and intro across the top, figures right, optimizer plot full width beneath; phone: stacked */
+:root{color-scheme:dark;--bg:#0c0d10;--bg2:#14161b;--bg3:#1b1e25;--line:#262a33;--ink:#eeebe6;--mute:#a3a7b0;--coral:#ff6a3d;--ice:#8ab4ff;--lime:#c6f36b;--sand:#f2c14e}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.02em;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:clamp(38px,5.5vw,60px)}
+h2{font-size:clamp(28px,3.6vw,40px)}
+h3{font-size:20px;line-height:1.25}
+p{margin:0}
+ul{margin:0;padding-left:20px}
+li+li{margin-top:6px}
+img{max-width:100%}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(40px,6vw,80px) max(5vw,16px)}
+.alt{background:var(--bg2);border-block:1px solid var(--line)}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px}
+.mute{color:var(--mute)}
+.lead{font-size:18px;color:var(--mute);max-width:62ch;margin-top:18px}
+.lead b{color:var(--ink);font-weight:600}
+.kind{color:var(--lime)}
+nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:16px;padding:10px max(5vw,16px)}
+.logo{font:700 18px "Space Grotesk",sans-serif;text-decoration:none;display:flex;align-items:center;gap:10px;margin-right:auto;white-space:nowrap}
+.logo i{width:30px;height:30px;border-radius:8px;background:var(--coral);display:grid;place-items:center;color:#140a06;font-style:normal;font-size:14px;flex:none}
+.links{display:flex;gap:2px;flex-wrap:nowrap}
+.links a{text-decoration:none;color:var(--mute);padding:8px 11px;border-radius:8px;font-size:15px}
+.links a:hover,.links a:focus-visible{color:var(--ink);background:var(--bg2)}
+.links a.on{color:var(--ink);background:var(--bg3)}
+.btn.menu{display:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 20px;border-radius:10px;font:600 15px Inter,sans-serif;text-decoration:none;border:1px solid var(--line);background:var(--bg2);color:var(--ink);cursor:pointer;white-space:nowrap}
+.btn:hover{border-color:var(--mute)}
+.btn.main{background:var(--coral);border-color:var(--coral);color:#140a06}
+.btn.main:hover{filter:brightness(1.08)}
+.btn.sm{min-height:38px;padding:0 14px;font-size:14px}
+.btn svg{width:18px;height:18px}
+:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero{padding-bottom:0}
+.top{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:end}
+.hello{color:var(--lime);margin-bottom:14px}
+.hero h1{font-size:clamp(46px,7.5vw,92px);line-height:1.02}
+.hero h1 span{color:var(--mute);display:block;font-size:.42em;margin-top:14px;letter-spacing:-.01em}
+.figs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.figs div{padding:18px 20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.figs div:nth-child(2n){border-right:0}
+.figs div:nth-last-child(-n+2){border-bottom:0}
+.figs b{display:block;font:700 clamp(28px,3.4vw,40px)/1 "Space Grotesk",sans-serif;white-space:nowrap}
+.figs small{color:var(--mute);font-size:14px}
+.plot{margin-top:44px;border:1px solid var(--line);border-radius:18px;background:var(--bg);overflow:hidden}
+.hero .plot{border-radius:18px 18px 0 0;border-bottom:0}
+.plot-head{display:flex;justify-content:space-between;gap:12px 16px;flex-wrap:wrap;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line)}
+.legend{display:flex;gap:14px;flex-wrap:wrap}
+.legend span{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--mute)}
+.legend i{width:18px;height:3px;border-radius:2px}
+.fig{position:relative;height:clamp(260px,34vw,380px)}
+.fig.short{height:clamp(220px,28vw,320px)}
+.fig>svg{position:absolute;inset:0;width:100%;height:100%}
+.ph{padding-bottom:clamp(24px,3vw,40px)}
+.crumb{display:flex;gap:8px;flex-wrap:wrap;color:var(--mute);font-size:14px;margin-bottom:18px}
+.crumb a{text-decoration:none}
+.crumb a:hover{color:var(--ink)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.sec-head p{color:var(--mute);max-width:52ch}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:56px}
+.card{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--bg2);display:flex;flex-direction:column;gap:10px}
+.alt .card{background:var(--bg)}
+a.card{text-decoration:none;transition:border-color .2s}
+a.card:hover{border-color:var(--coral)}
+.card p{color:var(--mute)}
+.card em{margin-top:auto;font-style:normal;font-size:14px;color:var(--coral);font-weight:600}
+.big-n{font:700 44px/1 "Space Grotesk",sans-serif;color:var(--coral)}
+.big-n small{font-size:16px;color:var(--mute);font-weight:500;margin-left:6px}
+.txt{font-size:17px;color:var(--mute)}
+.txt p+p{margin-top:16px}
+.txt b{color:var(--ink);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font-size:14px;padding:6px 12px;border-radius:999px;background:var(--bg3);border:1px solid var(--line)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
+.sk h3{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.filters{display:flex;gap:8px;flex-wrap:wrap}
+.filters button{min-height:40px;padding:0 16px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--mute);font:500 14px Inter,sans-serif;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+input,select,textarea{font:16px Inter,sans-serif;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-height:44px;width:100%}
+textarea{min-height:140px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--ice);outline:none}
+label{display:grid;gap:6px;font-size:14px;color:var(--mute)}
+.search{max-width:280px}
+input[type=range]{padding:0;border:0;background:transparent;accent-color:var(--coral);min-height:32px}
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pj{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:16px;background:var(--bg2);overflow:hidden;text-decoration:none;transition:border-color .2s}
+.alt .pj{background:var(--bg)}
+.pj:hover{border-color:var(--coral)}
+.art{height:150px;border-bottom:1px solid var(--line);background:var(--bg)}
+.alt .pj .art{background:var(--bg2)}
+.art svg{width:100%;height:100%;display:block}
+.pj .body{padding:22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pj p{color:var(--mute)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags span{font-size:13px;color:var(--ice);background:color-mix(in srgb,var(--ice) 10%,transparent);padding:4px 10px;border-radius:6px}
+.pj em{font-style:normal;font-weight:600;font-size:15px;color:var(--ink)}
+.pj:hover em{color:var(--coral)}
+.empty{padding:40px;text-align:center;border:1px dashed var(--line);border-radius:16px;color:var(--mute)}
+.p-hero{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:40px;align-items:end}
+.facts{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.facts div{display:flex;justify-content:space-between;gap:16px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:15px}
+.facts div:last-child{border-bottom:0}
+.facts span{color:var(--mute)}
+.facts b{font-weight:600;text-align:right}
+.demo{border:1px solid var(--line);border-radius:18px;background:var(--bg);overflow:hidden}
+.demo-bar{display:flex;flex-wrap:wrap;gap:14px 20px;align-items:end;padding:16px 18px;border-bottom:1px solid var(--line);background:var(--bg2)}
+.demo-bar label{min-width:160px;flex:1 1 160px}
+.demo-bar .tools{flex:0 0 auto}
+.demo-out{display:grid;grid-template-columns:repeat(auto-fit,minmax(9em,1fr));gap:1px;background:var(--line);border-top:1px solid var(--line)}
+.demo-out div{background:var(--bg2);padding:14px 18px}
+.demo-out b{display:block;font:700 24px/1.1 "Space Grotesk",sans-serif;white-space:nowrap}
+.demo-out small{color:var(--mute);font-size:13px}
+.note{font-size:13px;color:var(--mute);padding:10px 18px;border-top:1px solid var(--line)}
+.toggles{display:flex;gap:8px;flex-wrap:wrap}
+.toggles button{display:inline-flex;align-items:center;gap:8px;min-height:38px;padding:0 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--mute);font:500 14px Inter,sans-serif;cursor:pointer}
+.toggles button[aria-pressed=true]{color:var(--ink);border-color:#3a3f4a;background:var(--bg3)}
+.toggles button[aria-pressed=false] .dot{opacity:.25}
+.steps{counter-reset:s;display:grid;gap:14px}
+.steps>div{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;align-items:start}
+.steps>div::before{counter-increment:s;content:counter(s);width:44px;height:44px;border-radius:12px;background:var(--bg3);border:1px solid var(--line);display:grid;place-items:center;font:700 18px "Space Grotesk",sans-serif;color:var(--coral)}
+.steps b{display:block;margin-bottom:2px}
+.steps p{color:var(--mute)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mute);font-weight:500;font-size:14px}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+td.c,th.c{text-align:center}
+.yes{color:var(--lime);font-weight:700}
+.rec{display:grid;gap:10px;padding:18px}
+.rec-row{display:grid;grid-template-columns:minmax(0,10em) minmax(0,1fr) 4em;gap:14px;align-items:center}
+.rec-row .bar{height:12px;border-radius:6px;background:var(--bg3);overflow:hidden}
+.rec-row .bar i{display:block;height:100%;background:var(--coral);border-radius:6px}
+.rec-row small{grid-column:1/-1;color:var(--mute);font-size:13px;margin-top:-4px}
+.arch{display:grid;grid-template-columns:minmax(0,.8fr) auto minmax(0,1.4fr) auto minmax(0,1.2fr);gap:12px;align-items:center;padding:24px 18px}
+.arch .blk{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--bg2);text-align:center}
+.arch .blk b{display:block;font-family:"Space Grotesk",sans-serif}
+.arch .blk small{color:var(--mute);font-size:13px}
+.layers{display:flex;gap:6px;justify-content:center;margin:10px 0}
+.layers i{width:14px;border-radius:3px;background:var(--ice)}
+.heads{display:grid;gap:10px}
+.arrow{color:var(--mute);font-size:22px;text-align:center}
+.lbars{display:grid;gap:10px;padding:0 18px 18px}
+.lbar{display:grid;grid-template-columns:9em minmax(0,1fr) 4em;gap:12px;align-items:center;font-size:14px}
+.lbar div{height:14px;background:var(--bg3);border-radius:7px;overflow:hidden}
+.lbar i{display:block;height:100%}
+.gate{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:22px 26px;background:linear-gradient(90deg,color-mix(in srgb,var(--lime) 9%,var(--bg)),var(--bg))}
+.marks{display:flex;gap:8px;flex-wrap:wrap}
+.marks i{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font:700 14px "Space Grotesk",sans-serif;font-style:normal;color:#111}
+.ivw{display:grid;grid-template-columns:repeat(auto-fill,minmax(13em,1fr));gap:12px}
+.co{border:1px solid var(--line);border-left:4px solid var(--k);border-radius:12px;padding:14px 16px;background:var(--bg);display:grid;gap:2px;align-content:start}
+.co b{font:700 17px/1.25 "Space Grotesk",sans-serif}
+.co small{color:var(--mute);font-size:13px}
+.pager{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.pager a{border:1px solid var(--line);border-radius:14px;padding:18px 22px;text-decoration:none;display:grid;gap:4px}
+.pager a:hover{border-color:var(--coral)}
+.pager small{color:var(--mute)}
+.pager a:last-child{text-align:right}
+.cv{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:clamp(22px,4vw,48px);display:grid;gap:28px}
+.cv header{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:end;border-bottom:1px solid var(--line);padding-bottom:20px}
+.cv h3{font-size:15px;color:var(--coral);margin-bottom:12px;letter-spacing:0}
+.cv-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.cv-row span{color:var(--mute);white-space:nowrap}
+.cv .cvg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.cv li{color:var(--mute)}
+.cv li b{color:var(--ink);font-weight:600}
+.contact{background:var(--coral);color:#140a06}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center}
+.contact h2{font-size:clamp(34px,5vw,60px)}
+.contact p{font-size:17px;margin-top:16px;max-width:48ch}
+.cbox{background:#140a06;color:var(--ink);border-radius:18px;padding:24px;display:grid;gap:14px}
+.mail{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:space-between;padding:12px 16px;border:1px solid var(--line);border-radius:12px}
+.mail a{font-weight:600;overflow-wrap:anywhere;text-decoration:none}
+.form{display:grid;gap:16px}
+.msg{font-size:14px;color:var(--lime);min-height:1.4em}
+footer{border-top:1px solid var(--line);padding:40px max(5vw,16px) 28px}
+footer .wrap{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:28px}
+footer h4{margin:0 0 10px;font:600 14px Inter,sans-serif;color:var(--mute)}
+footer a{display:block;text-decoration:none;color:var(--ink);padding:4px 0;font-size:15px}
+footer a:hover{color:var(--coral)}
+.base{grid-column:1/-1;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--mute);font-size:14px;border-top:1px solid var(--line);padding-top:20px}
+@media(max-width:1180px){.links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);border-bottom:1px solid var(--line);padding:10px max(5vw,16px) 16px;flex-direction:column}.links.open{display:flex}.links a{padding:12px}.btn.menu{display:inline-flex}}
+@media(max-width:900px){.top,.split,.p-hero,.contact .wrap{grid-template-columns:minmax(0,1fr)}.g3,.g4{grid-template-columns:repeat(2,minmax(0,1fr))}.split{gap:28px}footer .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.arch{grid-template-columns:minmax(0,1fr)}.arch .arrow{transform:rotate(90deg)}}
+@media(max-width:600px){.hire{display:none}.projects,.g2,.g3,.g4,.cv .cvg,.pager{grid-template-columns:minmax(0,1fr)}.top{display:flex;flex-direction:column;align-items:stretch;gap:24px}.plot{margin-top:28px}.gate{grid-template-columns:minmax(0,1fr)}.pager a:last-child{text-align:left}table{font-size:13px}th,td{padding:8px 6px}.rec-row{grid-template-columns:minmax(0,7em) minmax(0,1fr) 3.4em}.lbar{grid-template-columns:6.5em minmax(0,1fr) 3.4em}footer .wrap{grid-template-columns:minmax(0,1fr)}}
+@media print{nav,footer,.no-print{display:none!important}body{background:#fff;color:#111}.cv{border:0;background:#fff}.cv li,.mute,.cv-row span{color:#333}.band{padding:0}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#home"><i>AG</i>Atharva Gosavi</a>
+    <div class="links" id="links"></div>
+    <a class="btn main sm hire" href="#contact">Hire me</a>
+    <button class="btn sm menu" id="menu" type="button" aria-expanded="false" aria-controls="links">Menu</button>
+  </div>
+</nav>
+<main id="app"><noscript><section class="band"><div class="wrap"><h1>Atharva Gosavi</h1><p class="lead">AI engineer and software developer. M.Tech in Signal Processing &amp; Machine Learning at NITK Surathkal; B.Tech in Computer Science (CGPA 9.09); GATE CSE qualified three times and GATE DA twice. Projects: traffic sign recognition with multi-task deep learning, a comparison of deep learning optimizers, house price prediction with PyTorch, the SuggestMe movie recommender and a FreeRTOS sensor monitor for ESP32. GitHub: github.com/meatharvagosavi.</p></div></section></noscript></main>
+<footer>
+  <div class="wrap">
+    <div><a class="logo" href="#home" style="margin-bottom:10px"><i>AG</i>Atharva Gosavi</a><p class="mute" style="font-size:15px;max-width:34ch">AI engineer and software developer. M.Tech at NITK Surathkal.</p></div>
+    <div><h4>Explore</h4><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#research">Research</a></div>
+    <div><h4>Profile</h4><a href="#education">Education</a><a href="#achievements">Achievements</a><a href="#profiles">Coding profiles</a><a href="#resume">Resume</a></div>
+    <div><h4>Connect</h4><a href="https://github.com/meatharvagosavi">GitHub</a><a href="https://www.linkedin.com/in/arg-57sam255/">LinkedIn</a><a href="https://www.kaggle.com/atharvargosavi">Kaggle</a><a href="https://www.geeksforgeeks.org/profile/argosav0733?tab=activity">GeeksforGeeks</a><a href="#contact">Contact</a></div>
+    <div class="base"><span>© 2026 Atharva Gosavi</span><span>Code. Learn. Build. Repeat.</span></div>
+  </div>
+</footer>
+
+<script>
+{
+const C={coral:'#ff6a3d',ice:'#8ab4ff',lime:'#c6f36b',sand:'#f2c14e',line:'#262a33',mute:'#a3a7b0',ink:'#eeebe6',bg:'#0c0d10'};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const GH='https://github.com/meatharvagosavi';
+const EMAIL='argosavi2019@gmail.com';
+const ICON={gh:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>',
+  li:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.83v1.54h.06c.53-1.01 1.84-2.07 3.79-2.07 4.05 0 4.8 2.67 4.8 6.13V21h-4v-4.97c0-1.19-.02-2.71-1.65-2.71-1.65 0-1.9 1.29-1.9 2.62V21h-4V9.75Z"/></svg>'};
+
+/* ================= DATA ================= */
+const NAV=[['about','About'],['skills','Skills'],['projects','Projects'],['research','Research'],['education','Education'],['achievements','Achievements'],['profiles','Profiles'],['resume','Resume'],['contact','Contact']];
+const SKILLS=[
+  {t:'Languages',c:C.coral,i:['Python','C++','C','Java','SQL','JavaScript']},
+  {t:'Machine learning',c:C.lime,i:['PyTorch','TensorFlow','Keras','Scikit-learn','XGBoost','Hugging Face','Transformers','OpenCV']},
+  {t:'Data & NLP',c:C.ice,i:['NumPy','Pandas','Matplotlib','Seaborn','NLTK','spaCy']},
+  {t:'Web & apps',c:C.sand,i:['HTML5','CSS3','Bootstrap','Node.js','Flask','Streamlit']},
+  {t:'Embedded',c:C.coral,i:['ESP32','FreeRTOS','I2C','Interrupts (ISR)','Wokwi']},
+  {t:'Tools',c:C.ice,i:['Git','GitHub','VS Code','Jupyter','Google Colab','Kaggle','Anaconda']}
+];
+const PROJ=[
+  {s:'traffic-signs',n:'Traffic Sign Recognition with Multi-Task Deep Learning',short:'Traffic sign recognition',k:'Deep learning',cat:'dl',repo:'Traffic-Sign-Recognition-Using-Multi-Task-Deep-Learning-for-Self-Driving-Vehicles',art:'sign',
+   d:'A deep learning framework that improves traffic sign recognition for autonomous driving by training one shared network on several related tasks.',
+   why:'A self-driving car has to read signs correctly in rain, glare and motion blur, and a misread speed limit or stop sign is a safety failure. Better recognition from the same camera data directly improves how safely the vehicle can act.',
+   how:[['Shared backbone','One convolutional network learns visual features (edges, shapes, colours) from the sign images, and every task reuses these features.'],['Task-specific heads','Small heads on top of the backbone each solve one task. Learning them together pushes the backbone toward features that generalise.'],['Joint loss','Training minimises a weighted sum of the task losses, so the weights control how much each task shapes the shared features.'],['Evaluation','The model is judged on recognition accuracy for the main sign-classification task.']],
+   t:['Python','Deep learning','Computer vision','Multi-task learning'],demo:'mtl'},
+  {s:'optimizers',n:'Optimization Algorithms for Deep Learning',short:'Optimizer comparison',k:'Research',cat:'dl',repo:'A-Comparison-Of-Optimization-Algorithms-for-Deep-Learning-',art:'opt',
+   d:'Trains the same model with SGD, SGD with momentum, Adagrad, RMSprop, Adadelta, Adam and NAdam, then compares how fast and how well each one converges.',
+   why:'Picking the optimizer and learning rate is one of the most expensive decisions in deep learning. A bad choice can waste days of GPU time or stall training completely, so understanding how each algorithm behaves is practical knowledge.',
+   how:[['Same model, same data','Every optimizer trains an identical network from the same starting conditions, so the only thing that changes is the update rule.'],['Seven update rules','From plain SGD to adaptive methods like Adam and NAdam, which scale each parameter\'s step by running statistics of its gradients.'],['Track convergence','Loss and accuracy are recorded over training to compare speed, stability and final performance.'],['Compare','The curves show where momentum helps, where adaptive methods win, and where they overshoot.']],
+   t:['Python','Jupyter','Optimization','Deep learning'],demo:'opt'},
+  {s:'house-prices',n:'House Price Prediction with PyTorch',short:'House price prediction',k:'Machine learning',cat:'ml',repo:'Kaggle-Advance-House-Price-Prediction-Using-Pytorch',art:'bars',
+   d:'A PyTorch regression model that predicts residential property prices on the Kaggle House Prices dataset.',
+   why:'Pricing a home involves dozens of features, from floor area to neighbourhood and build quality. This is a classic tabular-data problem that tests feature handling as much as modelling.',
+   how:[['Prepare the data','Clean missing values, encode categorical columns and scale numeric ones so the network can learn from them.'],['Build the model','A feed-forward neural network in PyTorch takes the feature vector and outputs a predicted price.'],['Train with gradient descent','The model minimises the error between predicted and real prices, as the demo below shows on one feature.'],['Validate','Held-out data checks that the model generalises and not just memorises the training homes.']],
+   t:['PyTorch','Pandas','Regression','Kaggle'],demo:'reg'},
+  {s:'suggestme',n:'SuggestMe: Movie Recommendation App',short:'SuggestMe recommender',k:'Machine learning',cat:'ml',repo:'SuggestMe---Movie-Recommendation-App',art:'grid',
+   d:'A content-based movie recommendation app built on the TMDB 5,000-movie dataset. Pick a film you like and it suggests the most similar ones.',
+   why:'Recommendation is behind most of what people watch and buy. A content-based recommender works even without user history, which solves the cold-start problem for new users.',
+   how:[['Build a profile per movie','Genres, keywords, cast and crew are combined into one description for each film.'],['Vectorise','Each description becomes a vector, so films with similar content end up close together.'],['Measure similarity','Cosine similarity scores how alike two films are, from 0 (nothing shared) to 1 (identical).'],['Recommend','For the chosen film, return the films with the highest similarity scores.']],
+   t:['Python','Jupyter','Recommender systems','NLP'],demo:'rec'},
+  {s:'freertos',n:'FreeRTOS Sensor Monitor',short:'FreeRTOS sensor monitor',k:'Embedded systems',cat:'sys',repo:'freertos-sensor-monitor',art:'wave',
+   d:'Multi-task FreeRTOS firmware for the ESP32 with an I2C sensor, an OLED display and interrupt handling, verified with logic-analyser captures in the Wokwi simulator.',
+   why:'Real devices must read sensors, update displays and react to events on time, all on one small chip. A real-time OS with prioritised tasks is how embedded engineers keep that predictable.',
+   how:[['Split work into tasks','Sensor reading, display updates and other work run as separate FreeRTOS tasks, each with its own priority.'],['Talk over I2C','The ESP32 reads the sensor and drives the OLED over the I2C bus.'],['Handle interrupts','An interrupt service routine (ISR) reacts to events immediately and hands work back to tasks.'],['Verify the timing','A logic analyser in Wokwi captures the bus and pin activity to confirm the timing is right.']],
+   t:['C++','FreeRTOS','ESP32','I2C'],demo:'rtos'}
+];
+const PBY=Object.fromEntries(PROJ.map(p=>[p.s,p]));
+const IVW=[
+  {s:'Semiconductors',col:C.coral,c:['Qualcomm','Intel','AMD','Marvell Semiconductor','GlobalFoundries','Infineon Technologies','SanDisk']},
+  {s:'Software & cloud',col:C.ice,c:['Nutanix','SolarWinds']},
+  {s:'Engineering & industrial',col:C.lime,c:['Bosch Global','Baker Hughes','Safran','Ingersoll Rand']},
+  {s:'IT services & analytics',col:C.sand,c:['Accenture','Cognizant','Axtria']},
+  {s:'EdTech',col:C.mute,c:['AlgoUniversity']}
+];
+const CATS=[['all','All'],['dl','Deep learning'],['ml','Machine learning'],['sys','Systems']];
+
+/* ================= ART ================= */
+const ART={
+  sign:()=>`<svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice"><rect width="400" height="240" fill="#101217"/><path d="M0 240 L170 120 L230 120 L400 240Z" fill="#171a20"/><path d="M200 130 L200 240" stroke="${C.sand}" stroke-width="4" stroke-dasharray="14 12"/><rect x="236" y="52" width="104" height="104" fill="none" stroke="${C.lime}" stroke-width="2.5" rx="4"/><text x="240" y="44" fill="${C.lime}" font-family="JetBrains Mono, monospace" font-size="13">stop 0.98</text><polygon points="268,72 308,72 322,90 322,118 308,136 268,136 254,118 254,90" fill="${C.coral}"/><polygon points="268,72 308,72 322,90 288,104" fill="#ff8a65"/><rect x="286" y="136" width="4" height="40" fill="#555"/><rect x="62" y="96" width="62" height="62" fill="none" stroke="${C.ice}" stroke-width="2" rx="4"/><text x="62" y="88" fill="${C.ice}" font-family="JetBrains Mono, monospace" font-size="13">60 0.94</text><circle cx="93" cy="127" r="24" fill="#eee" stroke="${C.coral}" stroke-width="6"/><text x="93" y="134" fill="#111" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="18">60</text></svg>`,
+  opt:()=>{let p='';[[C.mute,.9],[C.ice,.6],[C.coral,.3]].forEach(([c,k],j)=>{let d='M10 20';for(let x=0;x<=380;x+=8){d+=` L${10+x} ${(20+170*(1-Math.exp(-x/(140-j*45)))+Math.sin(x/9)*k*12*Math.exp(-x/120)).toFixed(1)}`}p+=`<path d="${d}" fill="none" stroke="${c}" stroke-width="2.5"/>`});return `<svg viewBox="0 0 400 220" preserveAspectRatio="none">${[50,100,150,200].map(y=>`<line x1="0" x2="400" y1="${y}" y2="${y}" stroke="${C.line}"/>`).join('')}${p}</svg>`},
+  bars:()=>{let s=7;const r=()=>(s=s*16807%2147483647)/2147483647;return `<svg viewBox="0 0 400 220" preserveAspectRatio="none">${Array.from({length:40},(_,i)=>`<circle cx="${20+i*9.3}" cy="${(190-(i*3.4+r()*40)).toFixed(1)}" r="3.5" fill="${C.ice}" opacity=".85"/>`).join('')}<line x1="20" y1="185" x2="385" y2="40" stroke="${C.coral}" stroke-width="3"/></svg>`},
+  grid:()=>{const c=[C.coral,C.ice,C.lime,C.sand];let s=3;const r=()=>(s=s*16807%2147483647)/2147483647;return `<svg viewBox="0 0 400 220" preserveAspectRatio="xMidYMid slice">${Array.from({length:30},(_,i)=>{const hi=[4,13,14].includes(i);return `<rect x="${14+(i%10)*38}" y="${14+Math.floor(i/10)*66}" width="30" height="54" rx="4" fill="${hi?c[i%4]:'#2a2e37'}" opacity="${hi?1:(.5+r()*.5).toFixed(2)}"/>`}).join('')}</svg>`},
+  wave:()=>{let d='M0 60';for(let x=0;x<=400;x+=40){const hi=(x/40)%2===0;d+=` L${x} ${hi?60:110} L${x+40} ${hi?60:110}`}return `<svg viewBox="0 0 400 220" preserveAspectRatio="none"><path d="${d}" fill="none" stroke="${C.lime}" stroke-width="2.5"/><path d="M0 190 ${Array.from({length:21},(_,i)=>`L${i*20} ${(190-Math.abs(Math.sin(i/2))*30).toFixed(1)}`).join(' ')}" fill="none" stroke="${C.ice}" stroke-width="2"/><text x="10" y="40" fill="${C.mute}" font-family="JetBrains Mono, monospace" font-size="13">SDA / SCL</text></svg>`}
+};
+const card=p=>`<a class="pj" href="#project-${p.s}"><div class="art">${ART[p.art]()}</div><div class="body"><span class="mono kind">${esc(p.k)}</span><h3>${esc(p.n)}</h3><p>${esc(p.d)}</p><div class="tags">${p.t.map(x=>`<span>${esc(x)}</span>`).join('')}</div><em>Read case study and try the demo →</em></div></a>`;
+
+/* ================= OPTIMIZER RACE ================= */
+const SURF={
+  bowl:{n:'Narrow bowl',f:(x,y)=>.1*x*x+2*y*y,g:(x,y)=>[.2*x,4*y],start:[-4.2,1.7],eq:'f(x,y) = 0.1x² + 2y²'},
+  ravine:{n:'Curved ravine',f:(x,y)=>{const u=y-.6*Math.sin(.9*x);return .1*x*x+2*u*u},g:(x,y)=>{const u=y-.6*Math.sin(.9*x);return[.2*x-2.16*u*Math.cos(.9*x),4*u]},start:[-4.2,1.6],eq:'f = 0.1x² + 2(y − 0.6 sin 0.9x)²'}
+};
+const OPTS=[
+  {n:'SGD',c:C.mute,step:(x,y,g,h,t,s,m)=>[x-.46*m*g,y-.46*m*h]},
+  {n:'Momentum',c:C.ice,step:(x,y,g,h,t,s,m)=>{s.u=.86*(s.u||0)+g;s.v=.86*(s.v||0)+h;return[x-.07*m*s.u,y-.07*m*s.v]}},
+  {n:'RMSprop',c:C.sand,step:(x,y,g,h,t,s,m)=>{s.a=.9*(s.a||0)+.1*g*g;s.b=.9*(s.b||0)+.1*h*h;return[x-.13*m*g/(Math.sqrt(s.a)+1e-8),y-.13*m*h/(Math.sqrt(s.b)+1e-8)]}},
+  {n:'Adam',c:C.coral,step:(x,y,g,h,t,s,m)=>{s.m=.9*(s.m||0)+.1*g;s.n=.9*(s.n||0)+.1*h;s.a=.999*(s.a||0)+.001*g*g;s.b=.999*(s.b||0)+.001*h*h;const k=1-.9**t,q=1-.999**t;return[x-.28*m*(s.m/k)/(Math.sqrt(s.a/q)+1e-8),y-.28*m*(s.n/k)/(Math.sqrt(s.b/q)+1e-8)]}}
+];
+const XR=4.8,YR=2.1;
+const runOpt=(o,S,m,N)=>{let[x,y]=S.start;const st={},pts=[[x,y]];for(let t=1;t<N;t++){const[g,h]=S.g(x,y);[x,y]=o.step(x,y,g,h,t,st,m);if(!isFinite(x)||!isFinite(y)||Math.abs(x)>40||Math.abs(y)>40)break;pts.push([x,y])}return pts};
+let CLEAN=[];
+function Race(fig,svg,st,onDone){
+  const still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let T=1,timer=null,cache={k:'',g:''},P=[];
+  const build=()=>{const S=SURF[st.surf];P=OPTS.filter(o=>st.on[o.n]).map(o=>({...o,p:runOpt(o,S,st.m,st.N)}))};
+  const bg=(W,H,S,mx,my)=>{const k=W+'x'+H+st.surf;if(cache.k===k)return cache.g;const cw=Math.max(5,Math.round(W/170)),ch=cw;let g='';const lo=Math.log(.02),hi=Math.log(S.f(XR,YR)+.02);
+    for(let px=0;px<W;px+=cw)for(let py=0;py<H;py+=ch){const x=(px+cw/2-W/2)/(W/2-20)*XR,y=-(py+ch/2-H/2)/(H/2-18)*YR;const lv=Math.max(0,Math.min(11,Math.floor((Math.log(S.f(x,y)+.02)-lo)/(hi-lo)*12)));const a=(lv%2?.03:.07)+(11-lv)*.006;g+=`<rect x="${px}" y="${py}" width="${cw+.5}" height="${ch+.5}" fill="rgba(138,180,255,${a.toFixed(3)})"/>`}
+    cache={k,g};return g};
+  const draw=()=>{const W=fig.clientWidth,H=fig.clientHeight;if(!W||!H)return;const S=SURF[st.surf];
+    const mx=x=>W/2+x/XR*(W/2-20),my=y=>H/2-y/YR*(H/2-18);
+    let g=bg(W,H,S,mx,my);const lab='font-family="JetBrains Mono, monospace" font-size="13" style="paint-order:stroke;stroke:#0c0d10;stroke-width:4px"';
+    g+=`<circle cx="${W/2}" cy="${H/2}" r="6" fill="${C.lime}"/><text x="${W/2+12}" y="${H/2+28}" fill="${C.lime}" ${lab}>minimum</text>`;
+    g+=`<circle cx="${mx(S.start[0])}" cy="${my(S.start[1])}" r="6" fill="none" stroke="${C.ink}" stroke-width="2"/><text x="${mx(S.start[0])+12}" y="${my(S.start[1])+4}" fill="${C.ink}" ${lab}>start</text>`;
+    P.forEach(o=>{const pts=o.p.slice(0,T);const d=pts.map((p,i)=>(i?'L':'M')+mx(p[0]).toFixed(1)+' '+my(p[1]).toFixed(1)).join(' ');const e=pts[pts.length-1];
+      g+=`<path d="${d}" fill="none" stroke="${o.c}" stroke-width="${o.n==='Adam'?2.8:2}" stroke-linejoin="round"/><circle cx="${mx(e[0]).toFixed(1)}" cy="${my(e[1]).toFixed(1)}" r="5" fill="${o.c}"/>`});
+    g+=`<text x="${W-16}" y="${H-16}" text-anchor="end" fill="${C.mute}" ${lab}>step ${Math.min(T,st.N)} / ${st.N}${W>560?'   '+S.eq:''}</text>`;
+    svg.innerHTML=g};
+  const go=()=>{build();clearInterval(timer);if(still){T=st.N;draw();onDone&&onDone(P);return}T=1;timer=setInterval(()=>{T++;draw();if(T>=st.N){clearInterval(timer);onDone&&onDone(P)}},45)};
+  const ro=new ResizeObserver(draw);ro.observe(fig);
+  CLEAN.push(()=>{clearInterval(timer);ro.disconnect()});
+  return {go};
+}
+const legend=()=>OPTS.map(o=>`<span><i style="background:${o.c}"></i>${o.n}</span>`).join('');
+
+/* ================= PAGES ================= */
+const head=(crumb,title,lead)=>`<section class="band ph"><div class="wrap"><div class="crumb"><a href="#home">Home</a><span>/</span>${crumb}</div><h1>${title}</h1>${lead?`<p class="lead">${lead}</p>`:''}</div></section>`;
+const cta=()=>`<section class="band contact"><div class="wrap"><div><h2>Let's build something that learns.</h2><p>I'm open to software development, ML engineering and AI research roles. The quickest way to reach me is email.</p></div><div class="cbox"><div class="mail"><a href="mailto:${EMAIL}">${EMAIL}</a><button class="btn sm copy" type="button">Copy</button></div><div class="g2" style="gap:10px"><a class="btn" href="${GH}">GitHub</a><a class="btn" href="https://www.linkedin.com/in/arg-57sam255/">LinkedIn</a><a class="btn" href="#resume">Resume</a><a class="btn" href="#contact">Message me</a></div></div></div></section>`;
+
+const PAGES={
+home:{t:'Home',h:()=>`
+<header class="band hero"><div class="wrap">
+  <div class="top"><div>
+    <p class="hello mono">&gt; python train.py --engineer atharva</p>
+    <h1>Atharva Gosavi<span>AI engineer and software developer</span></h1>
+    <p class="lead">I build machine learning systems from the maths up, from optimizers studied from first principles to multi-task vision models for self-driving cars. I'm doing an <b>M.Tech in Signal Processing &amp; ML at NITK Surathkal</b>, after a <b>B.Tech in Computer Science (CGPA 9.09)</b>.</p>
+    <div class="ctas"><a class="btn main" href="#projects">See my work</a><a class="btn" href="${GH}">${ICON.gh}GitHub</a><a class="btn" href="https://www.linkedin.com/in/arg-57sam255/">${ICON.li}LinkedIn</a><a class="btn" href="#resume">Resume</a></div>
+  </div>
+  <div class="figs"><div><b>3×</b><small>GATE CSE qualified</small></div><div><b>2×</b><small>GATE DA qualified</small></div><div><b>9.09</b><small>B.Tech CGPA, CSE</small></div><div><b>42</b><small>Public repositories</small></div></div></div>
+  <div class="plot"><div class="plot-head"><div class="legend">${legend()}</div><a class="btn sm" href="#project-optimizers">Open the optimizer lab →</a></div><div class="fig" id="fig"><svg id="loss" aria-label="Four optimizers descending a loss surface"></svg></div></div>
+</div></header>
+<section class="band alt"><div class="wrap"><div class="sec-head"><h2>Featured work</h2><p>Each project has its own page with the problem, the approach and a demo you can run in the browser.</p></div>
+  <div class="projects">${PROJ.slice(0,4).map(card).join('')}</div>
+  <div class="ctas" style="justify-content:center"><a class="btn" href="#projects">All projects</a></div></div></section>
+<section class="band"><div class="wrap"><div class="sec-head"><h2>Explore the site</h2></div><div class="g4">
+  ${[['about','About me','Who I am and what I want to build next'],['skills','Skills','My full tech stack, mapped to projects'],['research','Research','Optimization, vision, imaging and NLP'],['education','Education','M.Tech at NITK and B.Tech in CSE'],['achievements','Achievements','GATE ×5, academics and open source'],['profiles','Coding profiles','LeetCode, GFG, Codeforces, Kaggle and interviews'],['resume','Resume','One-page summary to print or save'],['contact','Contact','Send me a message']].map(([h,t,d])=>`<a class="card" href="#${h}"><h3>${t}</h3><p>${d}</p><em>Open →</em></a>`).join('')}
+</div></div></section>${cta()}`,
+ init:()=>{Race(document.getElementById('fig'),document.getElementById('loss'),{surf:'bowl',m:1,N:70,on:{SGD:1,Momentum:1,RMSprop:1,Adam:1}}).go()}},
+
+about:{t:'About',h:()=>head('About','I like to understand a model before I scale it.','')+`
+<section class="band" style="padding-top:0"><div class="wrap split">
+  <div class="figs" style="align-self:start"><div><b>NITK</b><small>M.Tech, SP &amp; ML</small></div><div><b>CSE</b><small>B.Tech background</small></div><div><b>5×</b><small>GATE qualified</small></div><div><b>KA</b><small>Surathkal, India</small></div></div>
+  <div class="txt">
+    <p>I'm <b>Atharva Gosavi</b>, an AI engineer with a computer science background. I enjoy the part of ML most people skip: <b>why</b> an optimizer converges, how a loss surface shapes training, and what really changes when one network learns several tasks at once.</p>
+    <p>I finished my <b>B.Tech in Computer Science with a CGPA of 9.09</b> and I'm now doing an <b>M.Tech in Signal Processing and Machine Learning at NITK Surathkal</b>. Along the way I qualified GATE Computer Science three times and GATE Data Science &amp; AI twice.</p>
+    <p>Right now I'm building projects in <b>biomedical imaging, computer vision, NLP and deep learning</b>. I also write embedded C++ on FreeRTOS, so I'm comfortable close to the hardware as well as in notebooks.</p>
+    <p>My motto is simple: <b>code, learn, build, repeat.</b></p>
+  </div></div></section>
+<section class="band alt"><div class="wrap"><div class="sec-head"><h2>What I bring to a team</h2></div><div class="g3">
+  <div class="card"><h3>Strong CS fundamentals</h3><p>Data structures, algorithms, operating systems and theory, tested repeatedly through GATE CSE and competitive programming.</p></div>
+  <div class="card"><h3>ML from first principles</h3><p>I study the maths behind models, including gradients, update rules and loss design, so I can debug training rather than guess.</p></div>
+  <div class="card"><h3>Range across the stack</h3><p>Python and PyTorch for models, Flask and Streamlit for apps, C++ and FreeRTOS for firmware.</p></div>
+</div></div></section>
+<section class="band"><div class="wrap split"><div><h2>What I'm looking for</h2></div><div class="txt"><p>I'm looking for <b>software development, ML engineering or AI research roles</b> where I can ship real systems and keep learning from strong engineers. I'm especially interested in teams working on computer vision, healthcare AI and the infrastructure that makes models train faster.</p><div class="ctas"><a class="btn main" href="#contact">Get in touch</a><a class="btn" href="#resume">View resume</a></div></div></div></section>`},
+
+skills:{t:'Skills',h:()=>head('Skills','Tech stack','The tools I use day to day, from training deep nets to shipping web apps and firmware.')+`
+<section class="band" style="padding-top:0"><div class="wrap g3">${SKILLS.map(s=>`<div class="card sk"><h3><i class="dot" style="background:${s.c}"></i>${esc(s.t)}</h3><div class="chips">${s.i.map(x=>`<span>${esc(x)}</span>`).join('')}</div></div>`).join('')}</div></section>
+<section class="band alt"><div class="wrap"><div class="sec-head"><h2>Where I've used them</h2><p>Key skills against my featured projects. Click a project name to open its page.</p></div>
+<div class="scroll"><table><thead><tr><th>Skill</th>${PROJ.map(p=>`<th class="c"><a href="#project-${p.s}">${esc(p.short)}</a></th>`).join('')}</tr></thead><tbody>
+${['Python','PyTorch','Deep learning','Computer vision','NLP','Jupyter','Optimization','C++','FreeRTOS','I2C'].map(sk=>`<tr><td>${sk}</td>${PROJ.map(p=>`<td class="c">${p.t.includes(sk)||(sk==='Python'&&p.cat!=='sys')||(sk==='Jupyter'&&['optimizers','house-prices','suggestme'].includes(p.s))?'<span class="yes" aria-label="yes">●</span>':'<span class="mute">·</span>'}</td>`).join('')}</tr>`).join('')}
+</tbody></table></div></div></section>`},
+
+projects:{t:'Projects',h:()=>head('Projects','Projects','Deep learning, machine learning and embedded systems. Every project has a case study and a live demo.')+`
+<section class="band" style="padding-top:0"><div class="wrap">
+  <div class="sec-head" style="align-items:center"><div class="filters" id="filters" role="group" aria-label="Filter projects"></div><input class="search" id="q" type="search" placeholder="Search projects" aria-label="Search projects"></div>
+  <div class="projects" id="grid"></div>
+  <div class="ctas" style="justify-content:center"><a class="btn" href="${GH}?tab=repositories">Browse all 42 repositories on GitHub</a></div>
+</div></section>`,
+ init:()=>{let cur='all',q='';const f=document.getElementById('filters'),g=document.getElementById('grid');
+  const r=()=>{f.innerHTML=CATS.map(([k,l])=>`<button type="button" data-k="${k}" aria-pressed="${k===cur}">${l}</button>`).join('');
+   const L=PROJ.filter(p=>(cur==='all'||p.cat===cur)&&(p.n+' '+p.d+' '+p.t.join(' ')).toLowerCase().includes(q));
+   g.innerHTML=L.length?L.map(card).join(''):'<div class="empty" style="grid-column:1/-1">No projects match. Try another word or filter.</div>'};
+  f.addEventListener('click',e=>{const b=e.target.closest('button');if(b){cur=b.dataset.k;r()}});
+  document.getElementById('q').addEventListener('input',e=>{q=e.target.value.trim().toLowerCase();r()});r()}},
+
+research:{t:'Research',h:()=>head('Research','Research interests','The questions I keep coming back to, and the projects where I explore them.')+`
+<section class="band" style="padding-top:0"><div class="wrap g2">
+${[['Optimization for deep learning',C.coral,'How update rules like momentum, RMSprop and Adam move through a loss surface, and why some settle faster or generalise better.','optimizers'],
+   ['Computer vision',C.ice,'Recognising objects reliably in real-world images, including multi-task models that share features between related tasks.','traffic-signs'],
+   ['Biomedical imaging',C.lime,'Applying deep learning to medical scans, where accuracy, robustness and explainability matter most. This is where I\'m building next.',''],
+   ['Natural language processing',C.sand,'Turning text into vectors that capture meaning, from classic NLTK and spaCy pipelines to Transformers.','suggestme'],
+   ['Signal processing',C.ice,'The core of my M.Tech: filtering, transforms and representation of signals, and how they feed into learning systems.',''],
+   ['Embedded and real-time ML',C.coral,'Running software under strict timing and memory limits, which is where efficient models eventually have to live.','freertos']
+  ].map(([t,c,d,s])=>`<div class="card"><h3 style="display:flex;gap:10px;align-items:center"><i class="dot" style="background:${c}"></i>${t}</h3><p>${d}</p>${s?`<em><a href="#project-${s}" style="text-decoration:none">Related: ${esc(PBY[s].short)} →</a></em>`:'<em style="color:var(--mute)">Work in progress</em>'}</div>`).join('')}
+</div></section>
+<section class="band alt"><div class="wrap"><div class="sec-head"><h2>Try it: how optimizers move</h2><p>The same experiment as my optimizer comparison project, on a two-parameter surface you can watch.</p></div>
+<div class="plot" style="margin-top:0"><div class="plot-head"><div class="legend">${legend()}</div><a class="btn sm" href="#project-optimizers">Full lab →</a></div><div class="fig short" id="fig"><svg id="loss"></svg></div></div></div></section>`,
+ init:()=>{Race(document.getElementById('fig'),document.getElementById('loss'),{surf:'ravine',m:1,N:80,on:{SGD:1,Momentum:1,RMSprop:1,Adam:1}}).go()}},
+
+education:{t:'Education',h:()=>head('Education','Education','Strong fundamentals in computer science, now specialising in signal processing and machine learning.')+`
+<section class="band" style="padding-top:0"><div class="wrap"><div class="g2">
+  <div class="card"><span class="mono kind">Now</span><h3>M.Tech, Signal Processing &amp; Machine Learning</h3><p>National Institute of Technology Karnataka (NITK), Surathkal</p><div class="big-n">8.0<small>CGPA</small></div><p>Specialising in signal processing, machine learning and deep learning, with projects in biomedical imaging and computer vision.</p></div>
+  <div class="card"><span class="mono kind">Completed</span><h3>B.Tech, Computer Science &amp; Engineering</h3><p>Undergraduate degree in CSE</p><div class="big-n">9.09<small>CGPA</small></div><p>Core computer science: data structures, algorithms, operating systems, databases, networks and theory of computation.</p></div>
+</div>
+<div class="gate" style="margin-top:16px"><div class="marks"><i style="background:var(--lime)">CS</i><i style="background:var(--lime)">CS</i><i style="background:var(--lime)">CS</i><i style="background:var(--ice)">DA</i><i style="background:var(--ice)">DA</i></div><div><h3>GATE qualified five times</h3><p class="mute">Cleared GATE Computer Science three times and GATE Data Science &amp; AI twice. GATE is India's national exam for postgraduate engineering admissions.</p></div></div>
+</div></section>`},
+
+achievements:{t:'Achievements',h:()=>head('Achievements','Achievements','Milestones from exams, academics and open source.')+`
+<section class="band" style="padding-top:0"><div class="wrap g3">
+${[['3×','GATE CSE qualified','Cleared India\'s national computer science exam three times.'],['2×','GATE DA qualified','Cleared GATE Data Science & Artificial Intelligence twice.'],['9.09','B.Tech CGPA','Computer Science & Engineering.'],['8.0','M.Tech CGPA','Signal Processing & ML, NITK Surathkal.'],['42','Public repositories','ML, deep learning, web and embedded projects on GitHub.'],['16','GitHub stars','Across my open-source repositories.']].map(([n,t,d])=>`<div class="card"><div class="big-n">${n}</div><h3>${t}</h3><p>${d}</p></div>`).join('')}
+</div></section>
+<section class="band alt"><div class="wrap split"><div><h2>Open-source badges</h2></div><div class="txt"><p>I collect open-source contribution badges on <b>Holopin</b>, which record contributions and community events across GitHub.</p><div class="ctas"><a class="btn" href="https://www.holopin.io/@meatharvagosavi">View my Holopin board</a></div></div></div></section>`},
+
+profiles:{t:'Coding profiles',h:()=>head('Profiles','Coding profiles','Competitive programming, ML competitions, open source and interview experience.')+`
+<section class="band" style="padding-top:0"><div class="wrap g3">
+${[['LeetCode','Data structures and algorithms practice, interview-style problems.','https://leetcode.com/u/AtharvaGosavi','AtharvaGosavi',C.sand],['GeeksforGeeks','DSA problems, practice and coding activity.','https://www.geeksforgeeks.org/profile/argosav0733?tab=activity','argosav0733',C.lime],['Codeforces','Timed competitive programming contests.','https://codeforces.com/profile/atharvagosavi2025','atharvagosavi2025',C.ice],['Kaggle','Datasets, notebooks and ML competitions, including the House Prices challenge.','https://www.kaggle.com/atharvargosavi','atharvargosavi',C.lime],['GitHub','42 public repositories, from deep learning to embedded firmware.',GH,'meatharvagosavi',C.coral],['Holopin','Open-source contribution badges.','https://www.holopin.io/@meatharvagosavi','@meatharvagosavi',C.ice]].map(([t,d,u,h,c])=>`<a class="card" href="${u}"><h3 style="display:flex;gap:10px;align-items:center"><i class="dot" style="background:${c}"></i>${t}</h3><p>${d}</p><em>${esc(h)} →</em></a>`).join('')}
+</div></section>
+<section class="band alt"><div class="wrap">
+  <div class="sec-head"><div><h2>Interview experience</h2><p class="mute" style="margin-top:12px;max-width:56ch">I've gone through technical interview rounds with ${IVW.reduce((a,g)=>a+g.c.length,0)} companies across semiconductors, software, IT services and engineering.</p></div>
+  <div class="legend">${IVW.map(g=>`<span><i style="background:${g.col};height:10px;width:10px;border-radius:50%"></i>${g.s} (${g.c.length})</span>`).join('')}</div></div>
+  <div class="ivw">${IVW.map(g=>g.c.map(n=>`<div class="co" style="--k:${g.col}"><b>${esc(n)}</b><small>${esc(g.s)}</small></div>`).join('')).join('')}</div>
+</div></section>`},
+
+resume:{t:'Resume',h:()=>`<section class="band"><div class="wrap">
+<div class="sec-head no-print"><div><div class="crumb"><a href="#home">Home</a><span>/</span>Resume</div><h1>Resume</h1></div><div class="tools"><button class="btn main" id="print" type="button">Print or save as PDF</button><a class="btn" href="#contact">Contact</a></div></div>
+<article class="cv">
+  <header><div><h2>Atharva Gosavi</h2><p class="mute" style="margin-top:6px">AI Engineer · Software Developer · GATE CSE qualified</p></div><div class="mute" style="font-size:15px;text-align:right">${EMAIL}<br>github.com/meatharvagosavi<br>Surathkal, Karnataka</div></header>
+  <div><h3>Summary</h3><p class="mute">AI engineer with a computer science background (B.Tech CGPA 9.09), now pursuing an M.Tech in Signal Processing and Machine Learning at NITK Surathkal. Builds deep learning, machine learning and embedded projects, with a research interest in optimization algorithms.</p></div>
+  <div class="cvg">
+    <div><h3>Education</h3><div style="display:grid;gap:12px"><div><div class="cv-row"><b>M.Tech, Signal Processing &amp; ML</b><span>CGPA 8.0</span></div><p class="mute">NITK Surathkal</p></div><div><div class="cv-row"><b>B.Tech, Computer Science &amp; Engg.</b><span>CGPA 9.09</span></div></div></div></div>
+    <div><h3>Achievements</h3><ul><li><b>GATE CSE</b> qualified three times</li><li><b>GATE DA</b> qualified twice</li><li>Interviewed with 17 companies including Qualcomm, Intel, AMD and Nutanix</li><li>42 public repositories on GitHub</li></ul></div>
+  </div>
+  <div><h3>Projects</h3><ul>${PROJ.map(p=>`<li><b>${esc(p.n)}</b>: ${esc(p.d)} <span class="mute">(${esc(p.t.join(', '))})</span></li>`).join('')}</ul></div>
+  <div class="cvg">${SKILLS.slice(0,4).map(s=>`<div><h3>${esc(s.t)}</h3><p class="mute">${esc(s.i.join(', '))}</p></div>`).join('')}</div>
+</article>
+<p class="mute no-print" style="font-size:14px;margin-top:14px">The print button opens your browser's print dialog, where you can choose "Save as PDF".</p>
+</div></section>`,
+ init:()=>{document.getElementById('print').addEventListener('click',()=>{try{window.print()}catch(e){}})}},
+
+contact:{t:'Contact',h:()=>head('Contact','Let\'s talk','Recruiting for a software, ML or AI role? Want to collaborate on research? Send me a note.')+`
+<section class="band" style="padding-top:0"><div class="wrap split">
+  <div style="display:grid;gap:14px;align-content:start">
+    <div class="card"><span class="mute" style="font-size:14px">Email</span><div class="mail" style="padding:0;border:0"><a href="mailto:${EMAIL}" style="font-size:18px">${EMAIL}</a><button class="btn sm copy" type="button">Copy</button></div></div>
+    <div class="card"><span class="mute" style="font-size:14px">Location</span><b>Surathkal, Karnataka, India</b></div>
+    <div class="g2" style="gap:10px"><a class="btn" href="${GH}">${ICON.gh}GitHub</a><a class="btn" href="https://www.linkedin.com/in/arg-57sam255/">${ICON.li}LinkedIn</a></div>
+  </div>
+  <form class="card form" id="form" novalidate>
+    <div class="g2"><label for="fn">Your name<input id="fn" required autocomplete="name"></label><label for="fe">Your email<input id="fe" type="email" required autocomplete="email"></label></div>
+    <label for="ft">Topic<select id="ft"><option>Job opportunity</option><option>Internship</option><option>Research collaboration</option><option>Something else</option></select></label>
+    <label for="fm">Message<textarea id="fm" required></textarea></label>
+    <div class="tools"><button class="btn main" type="submit">Open in my email app</button></div>
+    <p class="msg" id="fmsg" role="status"></p>
+  </form>
+</div></section>`,
+ init:()=>{const f=document.getElementById('form'),m=document.getElementById('fmsg');f.addEventListener('submit',e=>{e.preventDefault();const n=f.fn.value.trim(),em=f.fe.value.trim(),t=f.ft.value,b=f.fm.value.trim();
+  if(!n||!em||!b){m.style.color='var(--coral)';m.textContent='Please fill in your name, email and message.';return}
+  m.style.color='var(--lime)';m.textContent='Your email app should open with this message. If it doesn\'t, email '+EMAIL+' directly.';
+  location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent(t+' from '+n)+'&body='+encodeURIComponent(b+'\n\n'+n+' ('+em+')')})}}
+};
+
+/* ================= PROJECT PAGES ================= */
+const DEMOS={
+opt:{h:()=>`<div class="demo"><div class="demo-bar">
+  <label for="surf">Loss surface<select id="surf">${Object.entries(SURF).map(([k,s])=>`<option value="${k}">${s.n}</option>`).join('')}</select></label>
+  <label for="lr">Learning-rate scale: <b id="lrv">1.00×</b><input id="lr" type="range" min="0.25" max="1.6" step="0.05" value="1"></label>
+  <label for="ns">Steps: <b id="nsv">70</b><input id="ns" type="range" min="20" max="150" step="5" value="70"></label>
+  <div class="toggles" id="tg">${OPTS.map(o=>`<button type="button" data-n="${o.n}" aria-pressed="true"><i class="dot" style="background:${o.c}"></i>${o.n}</button>`).join('')}</div>
+  <div class="tools"><button class="btn main sm" id="run" type="button">Run</button></div></div>
+  <div class="fig" id="fig"><svg id="loss"></svg></div>
+  <div class="scroll"><table><thead><tr><th>Optimizer</th><th class="n">Final loss</th><th class="n">Steps to loss &lt; 0.01</th><th>Verdict</th></tr></thead><tbody id="res"></tbody></table></div>
+  <p class="note">Each path is computed live in your browser with the real update rules. Push the learning rate above about 1.1× to watch SGD diverge.</p></div>
+  <div style="margin-top:28px"><h3 style="margin-bottom:14px">The seven optimizers in the project</h3><div class="scroll"><table><thead><tr><th>Optimizer</th><th>Idea</th></tr></thead><tbody>
+  ${[['SGD','Step against the gradient with a fixed learning rate.'],['SGD + Momentum','Keep a running velocity so steps build up along consistent directions and damp zig-zags.'],['Adagrad','Divide each parameter\'s step by the root of its summed squared gradients, so frequent features slow down.'],['RMSprop','Like Adagrad, but with a decaying average so the step size doesn\'t shrink to zero.'],['Adadelta','Extends RMSprop so the effective learning rate adapts without a hand-set global rate.'],['Adam','Combines momentum (first moment) with RMSprop scaling (second moment), with bias correction.'],['NAdam','Adam with Nesterov momentum, which looks ahead before taking the step.']].map(([a,b])=>`<tr><td style="white-space:nowrap"><b>${a}</b></td><td class="mute">${b}</td></tr>`).join('')}</tbody></table></div></div>`,
+ init:()=>{const st={surf:'bowl',m:1,N:70,on:Object.fromEntries(OPTS.map(o=>[o.n,1]))};const S=()=>SURF[st.surf];
+  const res=document.getElementById('res');
+  const done=P=>{const s=S();const rows=P.map(o=>{const e=o.p[o.p.length-1];const div=o.p.length<st.N;const fl=div?Infinity:s.f(e[0],e[1]);const k=o.p.findIndex(p=>s.f(p[0],p[1])<.01);return{o,fl,k,div}});
+   const best=rows.filter(r=>r.k>=0).sort((a,b)=>a.k-b.k)[0];
+   res.innerHTML=rows.map(r=>`<tr><td><span style="display:inline-flex;gap:8px;align-items:center"><i class="dot" style="background:${r.o.c}"></i>${r.o.n}</span></td><td class="n">${r.div?'diverged':r.fl<1e-4?r.fl.toExponential(1):r.fl.toFixed(4)}</td><td class="n">${r.k>=0?r.k:'not reached'}</td><td class="mute">${r.div?'Learning rate too high':best&&r===best?'Fastest':r.k<0?'Still descending':'Converged'}</td></tr>`).join('')||'<tr><td colspan="4" class="mute">Turn on at least one optimizer.</td></tr>'};
+  const race=Race(document.getElementById('fig'),document.getElementById('loss'),st,done);
+  const tg=document.getElementById('tg');
+  tg.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on);st.on[b.dataset.n]=on?1:0;race.go()});
+  const lr=document.getElementById('lr'),ns=document.getElementById('ns');
+  lr.addEventListener('input',()=>{st.m=+lr.value;document.getElementById('lrv').textContent=st.m.toFixed(2)+'×'});
+  ns.addEventListener('input',()=>{st.N=+ns.value;document.getElementById('nsv').textContent=st.N});
+  lr.addEventListener('change',()=>race.go());ns.addEventListener('change',()=>race.go());
+  document.getElementById('surf').addEventListener('change',e=>{st.surf=e.target.value;race.go()});
+  document.getElementById('run').addEventListener('click',()=>race.go());race.go()}},
+
+reg:{h:()=>`<div class="demo"><div class="demo-bar">
+  <label for="rlr">Learning rate: <b id="rlrv">0.050</b><input id="rlr" type="range" min="0.005" max="0.15" step="0.005" value="0.05"></label>
+  <div class="tools"><button class="btn sm" id="rstep" type="button">1 step</button><button class="btn main sm" id="rtrain" type="button">Train 150 steps</button><button class="btn sm" id="rreset" type="button">Reset</button></div></div>
+  <div class="fig short" id="rfig"><svg id="rsvg" aria-label="Scatter of house size against price with the fitted line"></svg></div>
+  <div class="demo-out"><div><b id="o1">0</b><small>Steps</small></div><div><b id="o2">–</b><small>Mean squared error</small></div><div><b id="o3">–</b><small>Price per 1,000 sq ft</small></div><div><b id="o4">–</b><small>Base price</small></div></div>
+  <p class="note">Sample data: 30 made-up homes, price in lakh ₹ against floor area. The real project uses the full Kaggle dataset with many features and a neural network.</p></div>`,
+ init:()=>{let s=11;const r=()=>(s=s*16807%2147483647)/2147483647;const D=Array.from({length:30},()=>{const x=.6+r()*2.8;return[x,40+55*x+(r()-.5)*60]});
+  let w=0,b=0,n=0,timer=null;const fig=document.getElementById('rfig'),svg=document.getElementById('rsvg');
+  const mse=()=>D.reduce((a,[x,y])=>a+(w*x+b-y)**2,0)/D.length;
+  const step=()=>{const lr=+document.getElementById('rlr').value;let gw=0,gb=0;D.forEach(([x,y])=>{const e=w*x+b-y;gw+=2*e*x;gb+=2*e});w-=lr*gw/D.length;b-=lr*gb/D.length;n++};
+  const draw=()=>{const W=fig.clientWidth,H=fig.clientHeight;if(!W)return;const L=52,R=16,T=16,B=36;const X=x=>L+x/4*(W-L-R),Y=y=>H-B-y/300*(H-T-B);let g='';
+   [0,100,200,300].forEach(v=>{g+=`<line x1="${L}" x2="${W-R}" y1="${Y(v)}" y2="${Y(v)}" stroke="${C.line}"/><text x="${L-8}" y="${Y(v)+4}" text-anchor="end" fill="${C.mute}" font-size="13">${v}</text>`});
+   [0,1,2,3,4].forEach(v=>{g+=`<text x="${X(v)}" y="${H-12}" text-anchor="middle" fill="${C.mute}" font-size="13">${v}k</text>`});
+   g+=`<text x="${W-R}" y="${H-B-8}" text-anchor="end" fill="${C.mute}" font-size="13">sq ft</text><text x="${L+6}" y="${T+12}" fill="${C.mute}" font-size="13">lakh ₹</text>`;
+   D.forEach(([x,y])=>{const p=w*x+b;g+=`<line x1="${X(x)}" x2="${X(x)}" y1="${Y(y)}" y2="${Y(Math.max(-20,Math.min(320,p)))}" stroke="${C.coral}" stroke-opacity=".25"/>`});
+   D.forEach(([x,y])=>{g+=`<circle cx="${X(x)}" cy="${Y(y)}" r="5" fill="${C.ice}"/>`});
+   g+=`<line x1="${X(0)}" y1="${Y(b)}" x2="${X(4)}" y2="${Y(w*4+b)}" stroke="${C.coral}" stroke-width="3"/>`;
+   svg.innerHTML=`<defs><clipPath id="rc"><rect x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}"/></clipPath></defs>`+g.replace(/<line x1="([\d.]+)" y1/,'<line clip-path="url(#rc)" x1="$1" y1');
+   document.getElementById('o1').textContent=n;document.getElementById('o2').textContent=n?mse().toFixed(0):'–';document.getElementById('o3').textContent=n?'₹'+w.toFixed(1)+' L':'–';document.getElementById('o4').textContent=n?'₹'+b.toFixed(1)+' L':'–'};
+  const ro=new ResizeObserver(draw);ro.observe(fig);CLEAN.push(()=>{clearInterval(timer);ro.disconnect()});
+  document.getElementById('rlr').addEventListener('input',e=>document.getElementById('rlrv').textContent=(+e.target.value).toFixed(3));
+  document.getElementById('rstep').addEventListener('click',()=>{step();draw()});
+  document.getElementById('rtrain').addEventListener('click',()=>{clearInterval(timer);let k=0;timer=setInterval(()=>{for(let i=0;i<3;i++)step();draw();if(++k>=50)clearInterval(timer)},30)});
+  document.getElementById('rreset').addEventListener('click',()=>{clearInterval(timer);w=0;b=0;n=0;draw()});
+  for(let i=0;i<40;i++)step();draw()}},
+
+rec:{h:()=>`<div class="demo"><div class="demo-bar"><label for="mv">I liked<select id="mv"></select></label></div><div class="rec" id="recs"></div>
+  <p class="note">Sample: 16 well-known films tagged by hand. Similarity is cosine similarity between their tag vectors, the same measure the app uses on the full TMDB dataset.</p></div>`,
+ init:()=>{const M=[['Inception','sci-fi thriller dreams heist nolan dicaprio mind-bending'],['Interstellar','sci-fi space drama time-travel nolan mind-bending'],['The Dark Knight','action crime thriller superhero nolan'],['The Prestige','drama mystery thriller nolan magic mind-bending'],['The Matrix','sci-fi action simulation cyberpunk mind-bending'],['Avatar','sci-fi action adventure space cameron'],['Titanic','romance drama disaster cameron dicaprio'],['The Avengers','action superhero adventure team marvel'],['Iron Man','action superhero sci-fi tech marvel'],['Gravity','sci-fi space drama survival'],['The Martian','sci-fi space survival drama'],['Shutter Island','thriller mystery psychological dicaprio mind-bending'],['3 Idiots','comedy drama college friendship'],['Dangal','drama sports biography family'],['The Wolf of Wall Street','comedy crime biography dicaprio'],['Avengers: Endgame','action superhero adventure team marvel time-travel']].map(([n,t])=>({n,t:t.split(' ')}));
+  const sel=document.getElementById('mv'),out=document.getElementById('recs');sel.innerHTML=M.map((m,i)=>`<option value="${i}">${esc(m.n)}</option>`).join('');
+  const cos=(a,b)=>a.t.filter(x=>b.t.includes(x)).length/Math.sqrt(a.t.length*b.t.length);
+  const r=()=>{const a=M[+sel.value];const L=M.filter(m=>m!==a).map(m=>({m,s:cos(a,m)})).sort((x,y)=>y.s-x.s).slice(0,5);
+   out.innerHTML=`<p class="mute" style="font-size:14px">Top 5 recommendations for <b style="color:var(--ink)">${esc(a.n)}</b></p>`+L.map(({m,s})=>`<div class="rec-row"><b>${esc(m.n)}</b><div class="bar"><i style="width:${(s*100).toFixed(0)}%"></i></div><span class="n" style="text-align:right;font-variant-numeric:tabular-nums">${s.toFixed(2)}</span><small>${s?'Shared: '+esc(m.t.filter(x=>a.t.includes(x)).join(', ')):'Nothing in common'}</small></div>`).join('')};
+  sel.addEventListener('change',r);r()}},
+
+mtl:{h:()=>`<div class="demo">
+  <div class="arch"><div class="blk"><b>Sign image</b><small>Camera frame, cropped</small></div><div class="arrow">→</div>
+   <div class="blk"><b>Shared CNN backbone</b><div class="layers">${[60,52,44,36,28,22].map(h=>`<i style="height:${h}px"></i>`).join('')}</div><small>Learns features every task reuses</small></div><div class="arrow">→</div>
+   <div class="heads"><div class="blk" style="border-color:${C.coral}"><b>Head 1: sign class</b><small>Stop, speed limit, yield…</small></div><div class="blk" style="border-color:${C.lime}"><b>Head 2: auxiliary task</b><small>A related task that sharpens features</small></div></div></div>
+  <div class="demo-bar" style="border-top:1px solid var(--line)"><label for="lam">Auxiliary task weight λ: <b id="lamv">0.50</b><input id="lam" type="range" min="0" max="2" step="0.05" value="0.5"></label></div>
+  <div class="lbars" id="lb" style="padding-top:18px"></div>
+  <p class="note">Illustrative architecture and loss values; see the repository for the exact tasks and results. Total loss = L(classification) + λ · L(auxiliary).</p></div>`,
+ init:()=>{const L1=.42,L2=.65,lam=document.getElementById('lam'),lb=document.getElementById('lb');
+  const r=()=>{const l=+lam.value;document.getElementById('lamv').textContent=l.toFixed(2);const tot=L1+l*L2,mx=L1+2*L2;
+   lb.innerHTML=[['Classification',L1,C.coral],['λ × Auxiliary',l*L2,C.lime],['Total loss',tot,C.ice]].map(([n,v,c])=>`<div class="lbar"><span>${n}</span><div><i style="width:${(v/mx*100).toFixed(1)}%;background:${c}"></i></div><b class="n" style="text-align:right;font-variant-numeric:tabular-nums">${v.toFixed(2)}</b></div>`).join('')+
+   `<p class="mute" style="font-size:14px">${l===0?'λ = 0: the auxiliary head is ignored and this becomes a single-task model.':l>1.2?'High λ: the auxiliary task dominates, which can pull features away from the main task.':'A balanced λ lets the auxiliary task help without overpowering sign classification.'}</p>`};
+  lam.addEventListener('input',r);r()}},
+
+rtos:{h:()=>`<div class="demo"><div class="demo-bar"><div class="tools"><button class="btn main sm" id="play" type="button">Play 1 second</button></div><p class="mute" style="font-size:14px;flex:1 1 220px">Higher-priority work pre-empts lower-priority tasks. Interrupts (coral) jump in front of everything.</p></div>
+  <div class="fig short" id="tfig"><svg id="tsvg" aria-label="FreeRTOS task timeline"></svg></div>
+  <div class="demo-out" id="util"></div>
+  <p class="note">Illustrative schedule with a preemptive priority scheduler and 1 ms ticks. Task periods and run times are example values, not measurements from the firmware.</p></div>`,
+ init:()=>{const TK=[{n:'ISR (button)',sn:'ISR',p:9,c:C.coral,ev:[330,710],d:6},{n:'SensorTask',sn:'Sensor',p:3,c:C.lime,per:100,off:0,d:14},{n:'DisplayTask',sn:'Display',p:2,c:C.ice,per:200,off:5,d:45},{n:'LoggerTask',sn:'Logger',p:1,c:C.sand,per:500,off:10,d:70},{n:'Idle',sn:'Idle',p:0,c:'#3a3f4a'}];
+  const rem=TK.map(()=>0),run=[];for(let t=0;t<1000;t++){TK.forEach((k,i)=>{if(k.ev&&k.ev.includes(t))rem[i]+=k.d;if(k.per&&(t-k.off)%k.per===0&&t>=k.off)rem[i]+=k.d});let w=TK.length-1,bp=-1;TK.forEach((k,i)=>{if(k.p>0&&rem[i]>0&&k.p>bp){bp=k.p;w=i}});if(w!==TK.length-1)rem[w]--;run.push(w)}
+  const segs=[];run.forEach((w,t)=>{const l=segs[segs.length-1];if(l&&l.w===w&&l.e===t)l.e=t+1;else segs.push({w,s:t,e:t+1})});
+  document.getElementById('util').innerHTML=TK.map((k,i)=>`<div><b style="color:${k.c}">${(run.filter(x=>x===i).length/10).toFixed(1)}%</b><small>${k.n} CPU</small></div>`).join('');
+  const fig=document.getElementById('tfig'),svg=document.getElementById('tsvg');let T=1000,timer=null;
+  const draw=()=>{const W=fig.clientWidth,H=fig.clientHeight;if(!W)return;const sm=W<520,L=sm?64:110,R=12,top=10,B=30,rh=(H-top-B)/TK.length,X=t=>L+t/1000*(W-L-R);let g='';
+   TK.forEach((k,i)=>{const y=top+i*rh;g+=`<line x1="${L}" x2="${W-R}" y1="${y+rh}" y2="${y+rh}" stroke="${C.line}"/><text x="${L-10}" y="${y+rh/2+5}" text-anchor="end" fill="${C.mute}" font-size="13">${sm?k.sn:k.n}</text>`});
+   [0,250,500,750,1000].forEach(t=>{if(sm&&(t===250||t===750))return;g+=`<text x="${X(t)}" y="${H-10}" text-anchor="${t===0?'start':t===1000?'end':'middle'}" fill="${C.mute}" font-size="13">${t} ms</text>`});
+   segs.forEach(s=>{if(s.s>=T)return;const y=top+s.w*rh+rh*.2;g+=`<rect x="${X(s.s).toFixed(1)}" y="${y.toFixed(1)}" width="${Math.max(1.5,X(Math.min(s.e,T))-X(s.s)).toFixed(1)}" height="${(rh*.6).toFixed(1)}" rx="2" fill="${TK[s.w].c}"/>`});
+   if(T<1000)g+=`<line x1="${X(T)}" x2="${X(T)}" y1="${top}" y2="${H-B}" stroke="${C.ink}" stroke-width="1.5"/>`;svg.innerHTML=g};
+  const ro=new ResizeObserver(draw);ro.observe(fig);CLEAN.push(()=>{clearInterval(timer);ro.disconnect()});
+  document.getElementById('play').addEventListener('click',()=>{clearInterval(timer);T=0;timer=setInterval(()=>{T+=10;draw();if(T>=1000)clearInterval(timer)},25)});draw()}}
+};
+const projPage=p=>{const i=PROJ.indexOf(p),pv=PROJ[(i+PROJ.length-1)%PROJ.length],nx=PROJ[(i+1)%PROJ.length],D=DEMOS[p.demo];return{t:p.short,h:()=>`
+<section class="band ph"><div class="wrap"><div class="crumb"><a href="#home">Home</a><span>/</span><a href="#projects">Projects</a><span>/</span>${esc(p.short)}</div>
+ <div class="p-hero"><div><span class="mono kind">${esc(p.k)}</span><h1 style="margin-top:10px">${esc(p.n)}</h1><p class="lead">${esc(p.d)}</p><div class="ctas"><a class="btn main" href="${GH}/${encodeURIComponent(p.repo)}">${ICON.gh}View code on GitHub</a><a class="btn" href="#demo-${p.s}">Try the demo</a></div></div>
+ <div class="facts"><div><span>Category</span><b>${esc(p.k)}</b></div><div><span>Stack</span><b>${esc(p.t.join(', '))}</b></div><div><span>Repository</span><b><a href="${GH}/${encodeURIComponent(p.repo)}">GitHub</a></b></div></div></div></div></section>
+<section class="band alt"><div class="wrap split"><div><h2>Why it matters</h2></div><p class="txt">${esc(p.why)}</p></div></section>
+<section class="band"><div class="wrap split"><div><h2>How it works</h2></div><div class="steps">${p.how.map(([a,b])=>`<div><div><b>${esc(a)}</b><p>${esc(b)}</p></div></div>`).join('')}</div></div></section>
+<section class="band alt" id="demo-${p.s}"><div class="wrap"><div class="sec-head"><h2>Interactive demo</h2><p>Runs entirely in your browser.</p></div>${D.h()}</div></section>
+<section class="band"><div class="wrap pager"><a href="#project-${pv.s}"><small>← Previous project</small><b>${esc(pv.short)}</b></a><a href="#project-${nx.s}"><small>Next project →</small><b>${esc(nx.short)}</b></a></div></section>${cta()}`,init:D.init}};
+
+/* ================= ROUTER ================= */
+const app=document.getElementById('app'),links=document.getElementById('links'),menu=document.getElementById('menu');
+links.innerHTML=NAV.map(([h,l])=>`<a href="#${h}" data-h="${h}">${l}</a>`).join('');
+menu.addEventListener('click',()=>{const o=links.classList.toggle('open');menu.setAttribute('aria-expanded',o)});
+const show=()=>{
+  const h=location.hash.slice(1)||'home';
+  if(h.startsWith('demo-')){const el=document.getElementById(h);if(el){el.scrollIntoView();return}}
+  CLEAN.forEach(f=>f());CLEAN=[];
+  let pg=PAGES[h];if(!pg&&h.startsWith('project-')&&PBY[h.slice(8)])pg=projPage(PBY[h.slice(8)]);
+  if(!pg)pg={t:'Not found',h:()=>head('Not found','Page not found','That page doesn\'t exist. Try the home page or the project list.')+`<section class="band" style="padding-top:0"><div class="wrap ctas"><a class="btn main" href="#home">Home</a><a class="btn" href="#projects">Projects</a></div></section>`};
+  app.innerHTML=pg.h();document.title=(h==='home'?'Atharva Gosavi · AI Engineer':pg.t+' · Atharva Gosavi');
+  const sect=h.startsWith('project-')?'projects':h;
+  links.querySelectorAll('a').forEach(a=>a.classList.toggle('on',a.dataset.h===sect));
+  links.classList.remove('open');menu.setAttribute('aria-expanded','false');
+  window.scrollTo(0,0);
+  app.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(EMAIL);b.textContent='Copied'}catch(e){b.textContent='Select to copy'}setTimeout(()=>b.textContent='Copy',1800)}));
+  try{pg.init&&pg.init()}catch(e){console.error(e)}
+};
+window.addEventListener('hashchange',show);
+show();
+}
+</script>
+</body>
+</html>
